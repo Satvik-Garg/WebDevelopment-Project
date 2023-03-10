@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Login-Project Hive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="head_div">
+            <div class="logo_main"><img class="logo" src="logo.png"></div>
+            <div class="heading_div">Project Hive<br><p class="slogan">Upload.React.Improve</p></div>
+        </div>
+       </header>
+       <hr>
+       <h2>Login</h2>
+        <div>
+            <form action="">
+                <div for="Firstname" class="text">Username*:</div>
+                <input type="text" class="inputs" id="Firstname" placeholder="Username" required>
+                <div for="passport" class="text">Password*:</div>
+                <input type="password" class="inputs" id="pswd" minlength="6" maxlength="15" title="Should contain minimum 6 characters" placeholder="Password" required><br>
+                <p class="text" id="checkbox"><input type="checkbox" value="Remember me">Remember Me</p>
+                <a href="register.html" id="Forget">Forget Password?</a> 
+                <button  id="submit" onclick="check()" class="btn btn-success"><span id="span">Login</span></button>
+            </form>
+        </div>
+</body>

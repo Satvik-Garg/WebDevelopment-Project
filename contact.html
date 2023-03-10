@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Contact Us-Project Hive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        function home() {
+            location.href="home.html";
+        }
+        function about(){
+            location.href="about.html";
+        }
+        function contact(){
+            location.href="contact.html";
+        }
+        function gallery(){
+            location.href="gallery.html";
+        }
+        function login(){
+            location.href="login.html";
+        }
+        function register(){
+            //location.setAttribute("target","_blank");
+            location.href="register.html";
+            location.href.target="_blank";
+        }
+    </script>
+    <header>
+        <div class="head_div">
+            <div class="logo_main"><img class="logo" src="logo.png"></div>
+            <div class="heading_div">Project Hive<br><p class="slogan">Upload.React.Improve</p></div>
+        </div>
+    </header>
+    <hr>
+    <center>
+        <div class="container-fluid">
+        <div class="row" id="navbar">
+        
+        <div class="col-2 box"  onclick="home()">Home</div>
+        <div class="col-2 box" onclick="about()">About Us</div>
+        <div class="col-2 box" id="active" onclick="contact()" target="_blank">Contact Us</div>
+        <div class="col-2 box" onclick="gallery()" >Gallery</div>
+        <div class="col-2 box" onclick="login()" >Login</div>
+        <div class="col-2 box" onclick="register()">Register</div>
+        </div></div>
+        <hr>
+        </center>
+    
+        <div id="contact">
+            <div id="input">
+    <h2>Send Us a message</h2>
+    <p id="input_p">Write us to Improve</p>
+    <form onsubmit="sendEmail(); reset(); return false;">
+    <input type="text" class="input" id="name" placeholder="Name"><br>
+    <input type="email" class="input" id="email" placeholder="Email"><br>
+    <input type="text" class="input" id="subject"  placeholder="Subject"><br>
+    <textarea placeholder="Message" class="input" rows="5" id="body"></textarea><br>
+    <div id="submit"><input type="submit" id="submit_button"></div>
+        </div></form>
+        <div id="contact2">
+            <h2 id="cont_head">Contact Us</h2>
+            <p>We're open for any suggestion or just to have a chat</p>
+            <div class="location">
+            <img src="location.png" class="logo2" id="location" alt="Location">
+            <div class="info"><strong>Address: </strong>IIIT, C.G.CITY, Lucknow, Uttar Pradesh</div></div>
+            <div class="phone">
+            <img src="phone.png" class="logo2" id="phone" alt="Phone">
+            <div class="info"><strong>Phone: </strong> +91 8398484733</div></div>
+            <div class="email">
+            <img src="email.png" class="logo2" id="email" alt="Email">
+            <div class="info"><strong>Email: </strong>info_projecthive@gmail.com</div></div>
+            <div class="website">
+            <img src="website.png" class="logo2" id="website" alt="Website">
+            <div class="info"><strong>Website: </strong>projecthive.com</div></div>
+
+        </div></div>
+        <p class="footer">Project Hive © 2023</p>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username : "projecthive6@gmail.com",
+                    Password: "iiitl@1234",
+                    To : 'projecthive6@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : document.getElementById("subject").value,
+                    Body: "Name: "+document.getElementById("name") + "<br> Email:" + document.getElementById("email") +"<br> Message: " + document.getElementById("body").value
+                }).then(
+                    message => alert("Message Sent Successfully")
+                );
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+body {
+  align-items: center;
+  background-image: linear-gradient(to bottom right,black,rgb(44, 43, 43),rgb(75, 73, 73));
+  display: flex;
+  font-family: "Merriweather", serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  /* background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; */
+}
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.container {
+  
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+}
+
+.container:hover {
+  transform: scale(0.54);
+}
+.divider {
+  background-color: #ca6060;
+  height: 5px;
+  width: 160px;
+}
+.name {
+  color: wheat;
+  font-size: 32px;
+  font-weight: 200;
+  margin-top: 16px;
+  text-align: center;
+}
+.title {
+  color: rgb(100, 235, 100);
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+
+.head_div{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.logo_main{
+  display: inline-block;
+  vertical-align:middle;
+}
+.logo{
+  height:80px;
+  width:80px;
+  box-shadow: 0 0 15px -2px #8f9b90;
+  border-radius: 50%;
+}.heading_div{
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  /* margin-left: 10px;
+  margin-top: 15px; */
+  vertical-align:middle;
+  color:#008000;
+}
+.slogan{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(177, 204, 171);
+  margin-top: -1px;
+}
+header{
+  padding-bottom: 5px;
+  
+}
+
+hr{
+  margin:0px 10px;
+  background-color: aliceblue;
+}
