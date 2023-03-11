@@ -30,3 +30,14 @@ function checkPassword(){
        alert("Password is correct");  
     }  
 }
+function check(event){
+   event.preventDefault();
+
+   let name=document.getElementById("name").value;
+   let email=document.getElementById("email").value;
+   let pswd=document.getElementById("pswd").value;
+
+   localStorage.setItem("Name",name);
+   localStorage.setItem("Email",email);
+   localStorage.setItem("Password",pswd);
+}
