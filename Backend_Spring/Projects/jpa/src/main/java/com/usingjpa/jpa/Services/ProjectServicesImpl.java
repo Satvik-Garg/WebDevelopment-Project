@@ -41,8 +41,27 @@ public Project createProject(Project Proj){
     public Project getProjectById(int id) {
 
 
-        return projectRepository.getOne(id);
+        return projectRepository.findById(id).orElse(null);
         
     
 }
+
+
+    @Override
+    public Project updateProject(Project Proj,int id) {
+        // TODO Auto-generated method stub
+        // return projectRepository.updateProject(Proj).orElse(null);
+        Project oldProj = projectRepository.findById(id).orElse(null);
+        oldProj.setName(Proj.getName());
+        oldProj.setGithub(Proj.getGithub());
+        oldProj.setId(id);
+        return projectRepository.save(oldProj);
+    }
+
+
+    @Override
+    public void deleteProject(int id) {
+        // TODO Auto-generated method stub
+        projectRepository.deleteById(id);
+    }
 }
