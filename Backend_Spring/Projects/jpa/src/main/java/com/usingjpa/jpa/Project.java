@@ -20,15 +20,29 @@ public class Project {
 
 
 @Column
-private String email;
+private String Github;
+
+    public String getGithub() {
+    return Github;
+}
+
+public Project(int id, String name, String Github) {
+        this.id = id;
+        this.name = name;
+        this.Github = Github;
+    }
+
+public void setGithub(String github) {
+    Github = github;
+}
 
     public Project(){
   
     }
-    public Project(String name, String email) {
-            this.name = name;
-            this.email = email;
-        }
+    // public Project(String name, String email) {
+    //         this.name = name;
+    //         this.Github = email;
+        
     public int getId() {
         return id;
     }
@@ -41,12 +55,12 @@ private String email;
     public void setName(String name) {
         this.name = name;
     }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public String getEmail() {
+    //     return email;
+    // }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
 
         
 
