@@ -1,344 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProJectHive</title>
-    <link rel="stylesheet" href="Hive.css">
-</head>
+    <link rel="stylesheet" href="Hive.css" />
+  </head>
 
-<body>
+  <body>
     <script>
-        function login(){
-            location.href="login.html";
+      //         async function fetchText() {
+      //     let response = await fetch("http://localhost:8080/project/getallprojects");
+      //      response.setHeader("Access-Control-Allow-Origin", "*");
+      //     let data = await response.json();
+      //     console.log(data);
+      // }
+
+      const url = "http://127.0.0.1:8080/project/getallprojects";
+    fetch(url).then(
+        (res)=>{
+            console.log(res.json());
         }
-        function register(){
-            location.href="register.html";
-        }
-        function home(){
-            location.href="start.html";
-        }
-        function gallery(){
-            location.href="gallery.html";
-        }
-        function about(){
-            location.href="about.html";
-        }
-        function contact(){
-            location.href="contact.html";
-        }
-        function profile(){
-            location.href="profile.html";
-        }
+    ).catch(
+        (err)=>{console.log(err);}
+    );
+
+      function login() {
+        location.href = "login.html";
+      }
+      function register() {
+        location.href = "register.html";
+      }
+      function home() {
+        location.href = "start.html";
+      }
+      function gallery() {
+        location.href = "gallery.html";
+      }
+      function about() {
+        location.href = "about.html";
+      }
+      function contact() {
+        location.href = "contact.html";
+      }
+      function profile() {
+        location.href = "profile.html";
+      }
     </script>
     <div class="d1">
-        <div class="navbar">
-            <div class="links">
-                <div><button class="navbtn" onclick="gallery()">Gallery</button></div>
-                <div><button class="navbtn" onclick="about()">AboutUs</button></div>
-                <div><button class="navbtn" onclick="contact()">ContactUs</button></div>
-
-            </div>
-            <div class="head">
-                <h1 class="head1">Dive into our Hive</h1> <br>
-                <p class="head2">Let's Get <span><a href="#">Started</a></span></p>
-            </div>
+      <div class="navbar">
+        <div class="links">
+          <div><button class="navbtn" onclick="gallery()">Gallery</button></div>
+          <div><button class="navbtn" onclick="about()">AboutUs</button></div>
+          <div>
+            <button class="navbtn" onclick="contact()">ContactUs</button>
+          </div>
         </div>
+        <div class="head">
+          <h1 class="head1">Dive into our Hive</h1>
+          <br />
+          <p class="head2">
+            Let's Get <span><a href="#">Started</a></span>
+          </p>
+        </div>
+      </div>
     </div>
     <div class="main">
-        <div class="dash">
-            <div class="dashcontent">
-                <div></div>
-                <div></div>
-                <div onclick="profile()">Profile</div>
-                <div onclick="gallery()">Gallery</div>
-                <div>Notifications</div>
-                <div onclick="about()">AboutUs</div>
-                <div onclick="contact()">ContactUs</div>
-            </div>
+      <div class="dash">
+        <div class="dashcontent">
+          <div></div>
+          <div></div>
+          <div onclick="profile()">Profile</div>
+          <div onclick="gallery()">Gallery</div>
+          <div>Notifications</div>
+          <div onclick="about()">AboutUs</div>
+          <div onclick="contact()">ContactUs</div>
         </div>
-        <div class="content">
-            <div class="bar">
-                <div class="search"> <input id="search" type="search">
-                </div>
-                <div class="lense"><img src="Assets/Icons/1469731_find_glass_lense_search_tool_icon.png" alt=""></div>
-                <div class="user">
-                    <a href="profile.html"><img src="Assets/Icons/9027486_user_icon.png" alt=""></a>
-                    <div class="username">TestUser</div>
-                    <div class="logout"><input type="button" onclick="home()" value="LogOut"></div>
-                </div>
+      </div>
+      <div class="content">
+        <div class="bar">
+          <div class="search"><input id="search" type="search" /></div>
+          <div class="lense">
+            <img
+              src="Assets/Icons/1469731_find_glass_lense_search_tool_icon.png"
+              alt=""
+            />
+          </div>
+          <div class="user">
+            <a href="profile.html"
+              ><img src="Assets/Icons/9027486_user_icon.png" alt=""
+            /></a>
+            <div class="username">TestUser</div>
+            <div class="logout">
+              <input type="button" onclick="home()" value="LogOut" />
             </div>
-
-            <div class="project1">
-                <div class="prohead">
-                    <h1 id="odin">The Odin Project</h1>
-                    <div class="time">
-                        <div class="clock"> <img src="Assets/Icons/1814097_clock_schedule_time_icon.png" alt=""></div>
-                        <h3> 3:09 pm</h3>
-
-
-                    </div>
-                </div>
-                <h4>IIITL User</h4>
-                <div class="proj1">
-                    <div class="img"><img src="Assets/Icons/299063_heart_icon.png" alt="xxx">
-                        <div class="count" id="counter2">4</div>
-                    </div>
-                    <div class="discription">
-                        <h3>Description</h3>
-                        <p>this webpage is divided into 2 sections Right section - a signup form <br> Left section -
-                            picture of the Logo</p>
-                        <h6>creaters- IIITL USER,TestUser </h6>
-                        <h6>03-03-2023</h6>
-                        <h6 class="counter">4 likes</h6>
-                        <div class="comments">
-                            <h4>Comments</h4>
-                              <div class="commentbox">
-                            <h6>
-                                <ul id="commentlist"></ul>
-                            </h6>
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="proj2">
-                    <img id="heart" src="Assets/Icons/299063_heart_icon.png" alt=""><input id="comment" type="text"
-                        placeholder="Comment here!">
-                    <img id="post" src="Assets/Icons/3057660_media_message_network_social_icon.png" alt="">
-                </div>
-            </div>
-            <div class="project1">
-                <div class="prohead">
-                    <h1>The Grid</h1>
-                    <div class="time">
-                        <div class="clock"> <img src="Assets/Icons/1814097_clock_schedule_time_icon.png" alt=""></div>
-                        <h3> 4:39 pm</h3>
-
-
-                    </div>
-                </div>
-                <h4>IIITL User2</h4>
-                <div class="proj1">
-                    <div class="img1"><img src="Assets/Icons/299063_heart_icon.png" alt="">
-                        <div class="count" id="innercount1">90</div>
-                    </div>
-                    <div class="discription">
-                        <h3>Description</h3>
-                        <p>this webpage contains a Grid with transitions</p>
-                        <h6>creaters- IIITL USER2,Anonymouse </h6>
-                        <h6>05-03-2023</h6>
-                        <h6 id="outercount1">90 likes</h6>
-                        <div class="comments">
-                            <h4>Comments</h4>
-                            <div class="commentbox">
-                                <h6>
-                                    <ul id="commentlist2"></ul>
-                                </h6>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="proj2">
-                    <img id="heart1" src="Assets/Icons/299063_heart_icon.png" width="" alt=""><input id="comment2"
-                        type="text" placeholder="Comment here!">
-                    <img id="post2" src="Assets/Icons/3057660_media_message_network_social_icon.png" alt="">
-                </div>
-            </div>
-            <div class="project1">
-                <div class="prohead">
-                    <h1>The Project Alpha</h1>
-                    <div class="time">
-                        <div class="clock"> <img src="Assets/Icons/1814097_clock_schedule_time_icon.png" alt=""></div>
-                        <h3> 5:09 pm</h3>
-
-
-                    </div>
-                </div>
-                <h4>Bihari boi</h4>
-                <div class="proj1">
-                    <div class="img2"><img src="Assets/Icons/299063_heart_icon.png" alt="">
-                        <div class="count">6</div>
-                    </div>
-                    <div class="discription">
-                        <h3>Description</h3>
-                        <p>The Description of this project goes here</p>
-                        <h6>creators- ProKoder69 </h6>
-                        <h6>13-03-2023</h6>
-                        <h6>6 likes</h6>
-                        <div class="comments">
-                            <h4>Comments</h4>
-                            <div class="comment">
-                                <h6>Enter here</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="proj2">
-                    <img src="Assets/Icons/299063_heart_icon.png" width="" alt=""><input type="text"
-                        placeholder="Comment here!">
-                    <img src="Assets/Icons/3057660_media_message_network_social_icon.png" alt="">
-                </div>
-            </div>
-            <div class="project1">
-                <div class="prohead">
-                    <h1>Test Project </h1>
-                    <div class="time">
-                        <div class="clock"> <img src="Assets/Icons/1814097_clock_schedule_time_icon.png" alt=""></div>
-                        <h3> 3:09 pm</h3>
-
-
-                    </div>
-                </div>
-                <h4>IIITL User</h4>
-                <div class="proj1">
-                    <div class="img"><img src="Assets/Icons/299063_heart_icon.png" alt="">
-                        <div class="count">0</div>
-                    </div>
-                    <div class="discription">
-                        <h3>Description</h3>
-                        <p>here goes a brief discription of the project</p>
-                        <h6>creaters- IIITL USER,TestUser </h6>
-                        <h6>03-03-2023</h6>
-                        <h6>0 likes</h6>
-                        <div class="comments">
-                            <h4>Comments</h4>
-                            <div class="comment">
-                                <h6>Enter here</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="proj2">
-                    <img src="Assets/Icons/299063_heart_icon.png" width="" alt=""><input type="text"
-                        placeholder="Comment here!">
-                    <img src="Assets/Icons/3057660_media_message_network_social_icon.png" alt="">
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="project1">
+          <div class="prohead">
+            <h1 id="odin">The Odin Project</h1>
+            <div class="time">
+              <div class="clock">
+                <img
+                  src="Assets/Icons/1814097_clock_schedule_time_icon.png"
+                  alt=""
+                />
+              </div>
+              <h3>3:09 pm</h3>
+            </div>
+          </div>
+          <h4>IIITL User</h4>
+          <div class="proj1">
+            <div class="img">
+              <img src="Assets/Icons/299063_heart_icon.png" alt="xxx" />
+              <div class="count" id="counter2">4</div>
+            </div>
+            <div class="discription">
+              <h3>Description</h3>
+              <p>
+                this webpage is divided into 2 sections Right section - a signup
+                form <br />
+                Left section - picture of the Logo
+              </p>
+              <h6>creaters- IIITL USER,TestUser</h6>
+              <h6>03-03-2023</h6>
+              <h6 class="counter">4 likes</h6>
+              <div class="comments">
+                <h4>Comments</h4>
+                <div class="commentbox">
+                  <h6>
+                    <ul id="commentlist"></ul>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj2">
+            <img
+              id="heart"
+              src="Assets/Icons/299063_heart_icon.png"
+              alt=""
+            /><input id="comment" type="text" placeholder="Comment here!" />
+            <img
+              id="post"
+              src="Assets/Icons/3057660_media_message_network_social_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="project1">
+          <div class="prohead">
+            <h1>The Grid</h1>
+            <div class="time">
+              <div class="clock">
+                <img
+                  src="Assets/Icons/1814097_clock_schedule_time_icon.png"
+                  alt=""
+                />
+              </div>
+              <h3>4:39 pm</h3>
+            </div>
+          </div>
+          <h4>IIITL User2</h4>
+          <div class="proj1">
+            <div class="img1">
+              <img src="Assets/Icons/299063_heart_icon.png" alt="" />
+              <div class="count" id="innercount1">90</div>
+            </div>
+            <div class="discription">
+              <h3>Description</h3>
+              <p>this webpage contains a Grid with transitions</p>
+              <h6>creaters- IIITL USER2,Anonymouse</h6>
+              <h6>05-03-2023</h6>
+              <h6 id="outercount1">90 likes</h6>
+              <div class="comments">
+                <h4>Comments</h4>
+                <div class="commentbox">
+                  <h6>
+                    <ul id="commentlist2"></ul>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj2">
+            <img
+              id="heart1"
+              src="Assets/Icons/299063_heart_icon.png"
+              width=""
+              alt=""
+            /><input id="comment2" type="text" placeholder="Comment here!" />
+            <img
+              id="post2"
+              src="Assets/Icons/3057660_media_message_network_social_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="project1">
+          <div class="prohead">
+            <h1>The Project Alpha</h1>
+            <div class="time">
+              <div class="clock">
+                <img
+                  src="Assets/Icons/1814097_clock_schedule_time_icon.png"
+                  alt=""
+                />
+              </div>
+              <h3>5:09 pm</h3>
+            </div>
+          </div>
+          <h4>Bihari boi</h4>
+          <div class="proj1">
+            <div class="img2">
+              <img src="Assets/Icons/299063_heart_icon.png" alt="" />
+              <div class="count">6</div>
+            </div>
+            <div class="discription">
+              <h3>Description</h3>
+              <p>The Description of this project goes here</p>
+              <h6>creators- ProKoder69</h6>
+              <h6>13-03-2023</h6>
+              <h6>6 likes</h6>
+              <div class="comments">
+                <h4>Comments</h4>
+                <div class="comment">
+                  <h6>Enter here</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj2">
+            <img
+              src="Assets/Icons/299063_heart_icon.png"
+              width=""
+              alt=""
+            /><input type="text" placeholder="Comment here!" />
+            <img
+              src="Assets/Icons/3057660_media_message_network_social_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="project1">
+          <div class="prohead">
+            <h1>Test Project</h1>
+            <div class="time">
+              <div class="clock">
+                <img
+                  src="Assets/Icons/1814097_clock_schedule_time_icon.png"
+                  alt=""
+                />
+              </div>
+              <h3>3:09 pm</h3>
+            </div>
+          </div>
+          <h4>IIITL User</h4>
+          <div class="proj1">
+            <div class="img">
+              <img src="Assets/Icons/299063_heart_icon.png" alt="" />
+              <div class="count">0</div>
+            </div>
+            <div class="discription">
+              <h3>Description</h3>
+              <p>here goes a brief discription of the project</p>
+              <h6>creaters- IIITL USER,TestUser</h6>
+              <h6>03-03-2023</h6>
+              <h6>0 likes</h6>
+              <div class="comments">
+                <h4>Comments</h4>
+                <div class="comment">
+                  <h6>Enter here</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj2">
+            <img
+              src="Assets/Icons/299063_heart_icon.png"
+              width=""
+              alt=""
+            /><input type="text" placeholder="Comment here!" />
+            <img
+              src="Assets/Icons/3057660_media_message_network_social_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer">
-        <div class="social">
-            <img src="Assets/Icons/4102586_applications_linkedin_social_social media_icon.png" alt="xxx"
-                onclick="url( )">
-            <img src="Assets/Icons/2993724_social media_youtube_icon.png" alt="yt">
-            <img src="Assets/Icons/5296500_fb_social media_facebook_facebook logo_social network_icon.svg" alt="">
-            <img src="Assets/Icons/5296514_bird_tweet_twitter_twitter logo_icon.png" alt="">
-            <img src="Assets/Icons/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="">
-            <img src="Assets/Icons/5296765_camera_instagram_instagram logo_icon.png" alt="">
-
-        </div>
-        <div class="ftr2">© ProJectHive |
-            <a href="contact.html">Contact Us</a>
-        </div>
+      <div class="social">
+        <img
+          src="Assets/Icons/4102586_applications_linkedin_social_social media_icon.png"
+          alt="xxx"
+          onclick="url( )"
+        />
+        <img
+          src="Assets/Icons/2993724_social media_youtube_icon.png"
+          alt="yt"
+        />
+        <img
+          src="Assets/Icons/5296500_fb_social media_facebook_facebook logo_social network_icon.svg"
+          alt=""
+        />
+        <img
+          src="Assets/Icons/5296514_bird_tweet_twitter_twitter logo_icon.png"
+          alt=""
+        />
+        <img
+          src="Assets/Icons/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"
+          alt=""
+        />
+        <img
+          src="Assets/Icons/5296765_camera_instagram_instagram logo_icon.png"
+          alt=""
+        />
+      </div>
+      <div class="ftr2">
+        © ProJectHive |
+        <a href="contact.html">Contact Us</a>
+      </div>
     </div>
 
     <script>
-
-        let heart = document.getElementById("heart");
-        let counter = document.querySelector('.counter')
-        let counter2 = document.getElementById("counter2");
-        let bool = true;
-        let count = 4;
-        heart.onclick = () => {
-            if (bool) {
-                count++;
-                counter.innerHTML = count + " likes";
-                counter2.innerHTML = count;
-                bool = false;
-            } else {
-                count--;
-                counter.innerHTML = count + " likes";
-                counter2.innerHTML = count;
-                bool = true;
-            }
-
-
-        };
-        let heart1 = document.getElementById("heart1");
-        let innercount1 = document.getElementById("innercount1");
-        let outercount1 = document.getElementById("outercount1");
-        let count2 = 90;
-
-        heart1.onclick = () => {
-            if (bool) {
-                count2++;
-                outercount1.innerHTML = count2 + " likes";
-                innercount1.innerHTML = count2;
-                bool = false;
-            } else {
-                count2--;
-                outercount1.innerHTML = count2 + " likes";
-                innercount1.innerHTML = count2;
-                bool = true;
-            }
-        };
-        let comment = document.getElementById("comment");
-        let post = document.getElementById("post");
-        // post.addEventListener(onclick,()=>{
-
-        // // document.getElementById("a").appendChild("comment.innerHTML");
-        // document.getElementById("enter").innerHTML="hi";
-
-        // }
-
-
-
-
-        //  );
-        // post.onclick=()=>{
-        //     console.log(comment.value);
-        //     // document.getElementById("a").appendChild("comment.innerHTML");
-        // document.getElementById("enter").append( "TestUser: \n "+comment.value +"\n" );
-
-        // }   
-        post.onclick = () => {
-            comment = document.getElementById("comment").value;
-            let li = document.createElement("li");
-            let text = document.createTextNode(`Testuser : ${comment}`);
-            li.appendChild(text);
-            let commentList = document.getElementById("commentlist");
-            commentList.appendChild(li);
-
-            document.getElementById("comment").value = "";
-
+      let heart = document.getElementById("heart");
+      let counter = document.querySelector(".counter");
+      let counter2 = document.getElementById("counter2");
+      let bool = true;
+      let count = 4;
+      heart.onclick = () => {
+        if (bool) {
+          count++;
+          counter.innerHTML = count + " likes";
+          counter2.innerHTML = count;
+          bool = false;
+        } else {
+          count--;
+          counter.innerHTML = count + " likes";
+          counter2.innerHTML = count;
+          bool = true;
         }
+      };
+      let heart1 = document.getElementById("heart1");
+      let innercount1 = document.getElementById("innercount1");
+      let outercount1 = document.getElementById("outercount1");
+      let count2 = 90;
 
-        post2.onclick = () => {
-            comment = document.getElementById("comment2").value;
-            let li = document.createElement("li");
-            let text = document.createTextNode(`Testuser : ${comment}`);
-            li.appendChild(text);
-            let commentList = document.getElementById("commentlist2");
-            commentList.appendChild(li);
-
-            document.getElementById("comment2").value = "";
-
+      heart1.onclick = () => {
+        if (bool) {
+          count2++;
+          outercount1.innerHTML = count2 + " likes";
+          innercount1.innerHTML = count2;
+          bool = false;
+        } else {
+          count2--;
+          outercount1.innerHTML = count2 + " likes";
+          innercount1.innerHTML = count2;
+          bool = true;
         }
+      };
+      let comment = document.getElementById("comment");
+      let post = document.getElementById("post");
+      // post.addEventListener(onclick,()=>{
 
-        let project1 = document.getElementById("odin");
+      // // document.getElementById("a").appendChild("comment.innerHTML");
+      // document.getElementById("enter").innerHTML="hi";
 
+      // }
 
-        project1.onclick = () => {
+      //  );
+      // post.onclick=()=>{
+      //     console.log(comment.value);
+      //     // document.getElementById("a").appendChild("comment.innerHTML");
+      // document.getElementById("enter").append( "TestUser: \n "+comment.value +"\n" );
 
-            location.href = "https://appletri.github.io/sign-up-form/";
+      // }
+      post.onclick = () => {
+        comment = document.getElementById("comment").value;
+        let li = document.createElement("li");
+        let text = document.createTextNode(`Testuser : ${comment}`);
+        li.appendChild(text);
+        let commentList = document.getElementById("commentlist");
+        commentList.appendChild(li);
 
+        document.getElementById("comment").value = "";
+      };
 
-        };
+      post2.onclick = () => {
+        comment = document.getElementById("comment2").value;
+        let li = document.createElement("li");
+        let text = document.createTextNode(`Testuser : ${comment}`);
+        li.appendChild(text);
+        let commentList = document.getElementById("commentlist2");
+        commentList.appendChild(li);
 
+        document.getElementById("comment2").value = "";
+      };
 
+      let project1 = document.getElementById("odin");
 
-
-
-
+      project1.onclick = () => {
+        location.href = "https://appletri.github.io/sign-up-form/";
+      };
     </script>
-
-
-
-</body>
-
-
+  </body>
 </html>
