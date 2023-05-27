@@ -1,19 +1,22 @@
 import "./index.css";
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
-import Experience from "./App.jsx";
+import App from "./App.jsx";
+import Experience from "./Experiance.jsx";
+import Attach  from "./Attach.jsx";
+import studio from "@theatre/studio";
+import extension from "@theatre/r3f/dist/extension";
+import React, { Suspense } from "react";
+// import ReactDOM from "react-dom/client";
+
+studio.extend(extension);
+studio.initialize();
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
 root.render(
-  <Canvas
-    camera={{
-      fov: 45,
-      near: 0.1,
-      far: 2000,
-      position: [-3, 1.5, 4],
-    }}
-  >
-    <Experience />
-  </Canvas>
+   <Suspense fallback={null}>
+  <Attach />
+  </Suspense>
 );
