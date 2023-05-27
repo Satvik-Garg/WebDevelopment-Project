@@ -17,20 +17,56 @@ public class Project {
     private int id;
     @Column(name="Name")
     private String name;
+    @Column(name="Description")
+    private String Description;
+    @Column(name="likes")
+    private int likes;
+    @Column(name="Image")
+    private String Image;
+public Project(int id, String name, String description, int likes, String image, String github) {
+        this.id = id;
+        this.name = name;
+        Description = description;
+        this.likes = likes;
+        Image = image;
+        Github = github;
+    }
+public String getDescription() {
+    return Description;
+}
 
+public void setDescription(String description) {
+    Description = description;
+}
 
-@Column
+public int getLikes() {
+    return likes;
+}
+
+public void setLikes(int likes) {
+    this.likes = likes;
+}
+
+public String getImage() {
+    return Image;
+}
+
+public void setImage(String image) {
+    Image = image;
+}
+@Column(name="Github")
 private String Github;
 
     public String getGithub() {
     return Github;
 }
 
-public Project(int id, String name, String Github) {
-        this.id = id;
-        this.name = name;
-        this.Github = Github;
-    }
+// public Project(int id, String name, String Github) {
+//         this.id = id;
+//         this.name = name;
+//         this.Github = Github;
+
+//     }
 
 public void setGithub(String github) {
     Github = github;
