@@ -38,20 +38,23 @@ public class Controller{
         return services.getProjects(); 
     }
 
+    @CrossOrigin
     @PostMapping("/create")
     public Project createProject( @RequestBody Project proj){
 return services.createProject(proj);
     }
+    @CrossOrigin
     @GetMapping("/getProject/{id}")
     public Project getProjectById(@PathVariable int id){
             return services.getProjectById(id);
         }
-    
+    @CrossOrigin
     @PutMapping("/updateProject/{id}")
     public Project updateProject( @RequestBody Project pro,
     @PathVariable int id){
       return services.updateProject(pro,id);
     }
+    @CrossOrigin
     @DeleteMapping("/deleteProject/{id}")
     public void deleteProject(@PathVariable int id){
         services.deleteProject(id);
