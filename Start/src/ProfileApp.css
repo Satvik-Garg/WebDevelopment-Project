@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#video {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  /* position: absolute; */
+
+  width: 100vw;
+  height: 100vh;
+}
+.Window {
+  color: #fff;
+  height: 90vh;
+  width: 90vw;
+  margin-inline: auto;
+  border: 1px solid rgba(113 119 144 / 25%);
+  border-radius: 1rem;
+  margin-top: 5vh;
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: saturate(3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-size: 15px;
+  font-weight: 500;
+  /* filter: blur(15px); */
+  /* -webkit-filter: blur(8px); */
+  /* background-color: rgba(16 18 27 / 40%); */
+  background-color: rgba(16 18 27 / 40%);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+}
+.main {
+  width: 90%;
+  height: 80%;
+  /* border: 1px solid rgba(113 119 144 / 25%); */
+  border-radius: 1rem;
+}
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  grid-template-rows: repeat(4, 1fr);
+}
+.main > div {
+  /* border: 1px solid rgba(255, 255, 255, 0.717); */
+  border-radius: 1rem;
+  background-color: rgba(16 18 27 / 40%);
+  border: 1px solid rgba(113 119 144 / 25%);
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  transition: all 0.5s;
+}
+.one {
+  grid-row: 1/4;
+}
+.three {
+  grid-row: 3/5;
+}
+.two {
+  grid-row: 1/3;
+  transition: all 0.5s;
+}
+.two:hover {
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  scale: 1.011;
+}
+.main > div:hover {
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  scale: 1.011;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.image > img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px black;
+}
+.image {
+  padding: 0.5rem;
+  /* border: 2px solid black; */
+  /* border-radius: 20px; */
+}
+.socials {
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 3rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}

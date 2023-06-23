@@ -12,7 +12,7 @@ import {
 
 export default function Experience() {
   const computer = useGLTF(
-    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
+    "./model.gltf"
   );
   const HandleClick = () => {
     window.open("./start.html", "_blank");
