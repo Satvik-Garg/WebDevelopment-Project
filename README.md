@@ -79,3 +79,10 @@ The Project Management System is a full-stack web application that allows users 
 
 9. Acknowledgments
     - This project was developed as part of WebHex's internal project management efforts.
+    - Contributors
+        - S.Sridhar
+        - Satvik Garg
+        - Himanshu Sharma
+        - Shreyash 
+        - Ramanujan Gunturu
+        - D.Tharun
